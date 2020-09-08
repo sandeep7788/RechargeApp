@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bg"
+            android:fillViewport="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.49">
+
+                    <ImageView
+                        android:id="@+id/textView6"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/baloo"
+                        android:gravity="center"
+                        android:src="@drawable/rippco_logo"
+                        android:textSize="25dp"/>
+
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="13dp"
+                        android:gravity="center"
+                        android:text=" Open a new door of opportunities with \n new well designed mobile app."
+                        android:textColor="@color/gpvch_black"
+                        android:textSize="15dp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                        app:layout_constraintVertical_bias="0.0" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="4dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                    app:layout_constraintVertical_bias="1.0"
+                    android:foregroundGravity="center">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:autoLink="web"
+                        android:gravity="center_horizontal"
+                        android:linksClickable="true"
+                        android:src="@drawable/ic_baseline_copyright_24"
+                        app:tint="@color/gpvch_black" />
+
+                    <TextView
+                        android:id="@+id/tvsupport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal"
+                        android:padding="2dp"
+                        android:layout_marginLeft="4dp"
+                        android:text="2020 to 2021"
+                        android:textColor="@color/gpvch_black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:foregroundGravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.64">
+
+                    <!--
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="100.0dip"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/applogo" />
+        -->
+
+                    <!--          <TextView
+                        android:id="@+id/txt_userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginTop="50.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:text="User Name"
+                        android:textColor="#ffffffff" />
+
+                    <TextView
+                        android:id="@+id/txt_Pass"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginBottom="5.0dip"
+                        android:text="Password"
+                        android:textColor="#ffffffff" />-->
+
+                    <EditText
+                        android:id="@+id/edt_loginID"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="20.0dip"
+                        android:background="#041e37"
+                        android:drawableLeft="@drawable/ic_baseline_account_circle_24"
+                        android:drawablePadding="4dp"
+                        android:drawableTint="@color/white_color"
+                        android:hint="Account No."
+                        android:inputType="number"
+                        android:singleLine="true"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white_color"
+                        android:textColorHighlight="@color/white_color"
+                        android:textColorHint="#a0ffffff"
+                        android:textSize="15.0dip"
+                        android:elevation="4dp"/>
+
+                    <EditText
+                        android:id="@+id/edtPassword"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginRight="20.0dip"
+                        android:background="#041e37"
+                        android:drawableLeft="@drawable/ic_baseline_lock_24"
+                        android:drawablePadding="4dp"
+                        android:paddingTop="15dp"
+                        android:paddingBottom="15dp"
+                        android:paddingLeft="10dp"
+                        android:drawableTint="@color/white_color"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:maxEms="10"
+                        android:maxLength="10"
+                        android:layout_marginTop="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/white_color"
+                        android:textColorHighlight="@color/white_color"
+                        android:textColorHint="#a0ffffff"
+                        android:textSize="15.0dip"
+                        android:elevation="4dp"/>
+
+
+
+<!--
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:layout_marginRight="20.0dip"
+                        android:background="#a0041e37"
+                        android:padding="10.0dip">
+
+                        &lt;!&ndash;
+                        <ImageView
+                            android:id="@+id/img_show"
+                            android:layout_width="20.0dip"
+                            android:layout_height="20.0dip"
+                            android:layout_gravity="right"
+                            android:src="@drawable/show"
+                            android:visibility="gone" />
+&ndash;&gt;
+
+                        <ImageView
+                            android:id="@+id/img_hide"
+                            android:layout_width="20.0dip"
+                            android:layout_height="20.0dip"
+                            android:layout_gravity="right"
+                            android:src="@drawable/hide" />
+                    </FrameLayout>
+-->
+
+                    <Button
+                        android:id="@+id/btnSignIn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="39dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginBottom="3.0dip"
+                        android:background="@drawable/background_shadow"
+                        android:backgroundTint="#E74C3C"
+                        android:fontFamily="@font/baloo"
+                        android:paddingLeft="45dp"
+                        android:paddingRight="45dp"
+                        android:text="Sing In"
+                        android:textColor="#ffffffff" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:foregroundGravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvForgotPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="3.0dip"
+                            android:layout_marginTop="19dp"
+                            android:foregroundGravity="center"
+                            android:gravity="center"
+                            android:text="Forgot password ?"
+                            android:textColor="@color/gpvch_black"/>
+
+
+                        <!--                    <CheckBox-->
+                        <!--                        android:id="@+id/chkRememberMe"-->
+                        <!--                        android:layout_width="wrap_content"-->
+                        <!--                        android:layout_height="wrap_content"-->
+                        <!--                        android:layout_marginTop="4dp"-->
+                        <!--                        android:text="Remember me"-->
+                        <!--                        android:textColor="#000000"-->
+                        <!--                        android:shadowColor="@color/colorPrimary"-->
+                        <!--                        android:backgroundTint="@color/colorPrimary"-->
+                        <!--                        android:buttonTint="#E74C3C"-->
+                        <!--                        android:layout_gravity="center"-->
+                        <!--                        android:gravity="center"-->
+                        <!--                        android:foregroundGravity="center" />-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

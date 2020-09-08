@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffffff"
+        android:clickable="true"
+        android:fillViewport="true"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bg"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="75dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <RadioGroup
+                        android:id="@id/radioGroup"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <RadioButton
+                            android:id="@id/r_prepaid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30.0dip"
+                            android:layout_weight="1.0"
+                            android:checked="true"
+                            android:text="Prepaid" />
+
+                        <RadioButton
+                            android:id="@id/r_postpaid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:text="Postpaid" />
+                    </RadioGroup>
+
+
+                    <!--
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="40.0dip"
+                                android:text="Operator"
+                                android:textColor="@color/colorPrimary" />
+                    -->
+
+                    <LinearLayout
+                        android:id="@id/view_op"
+                        android:layout_width="fill_parent"
+                        android:layout_height="55dp"
+                        android:clickable="true"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0"
+                        android:background="@drawable/background_shadow">
+
+                        <ImageView
+                            android:id="@id/operatorimg"
+                            android:layout_width="0.0dip"
+                            android:layout_height="25.0dip"
+                            android:layout_gravity="center"
+                            android:foregroundGravity="center"
+                            android:layout_marginTop="1dp"
+                            android:paddingLeft="5dp"
+                            android:layout_weight="0.1"
+                            android:paddingBottom="2.0dip"
+                            android:src="@drawable/elictric" />
+
+                        <TextView
+                            android:id="@id/operator"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:hint="Select Operator"
+                            android:fontFamily="@font/worksans_medium"
+                            android:inputType="number"
+                            android:paddingLeft="9dp"
+                            android:paddingRight="9dp"
+                            android:textColor="#ff000000"
+                            android:textColorHint="@color/colorPrimary"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:foregroundGravity="center" />
+                    </LinearLayout>
+
+                    <RadioGroup
+                        android:id="@id/rgOperatorCodes"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        android:weightSum="1.0">
+
+                        <RadioButton
+                            android:id="@id/rbOperatorOne"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="BT" />
+
+                        <RadioButton
+                            android:id="@id/rbOperatorTwo"
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.5"
+                            android:text="BT" />
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="55dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/background_shadow"
+                            android:orientation="horizontal"
+                            android:weightSum="1.0">
+
+
+                            <EditText
+                                android:id="@id/edtMobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="55dp"
+                                android:layout_marginEnd="50dp"
+                                android:layout_marginRight="32dp"
+                                android:backgroundTint="#EBEDEF"
+                                android:drawableLeft="@drawable/elictric"
+                                android:drawablePadding="5.0dip"
+                                android:drawableTint="@color/colorPrimary"
+                                android:ellipsize="end"
+                                android:hint="Enter No."
+                                android:inputType="number"
+                                android:textColor="#ff000000"
+                                android:textColorHint="#566573"
+                                android:textSize="15.0sp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@id/ivPhoneBook"
+                                android:layout_width="35dp"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:layout_marginEnd="4dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_weight="0.1"
+                                android:foregroundGravity="center"
+                                android:src="@drawable/ic_phonebook"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="1.0"
+                                app:layout_constraintStart_toStartOf="@+id/edtMobile"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/background_shadow">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <EditText
+                                android:id="@+id/edtMobile1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/prepaid"
+                                android:drawablePadding="5.0dip"
+                                android:ellipsize="end"
+                                android:fontFamily="@font/worksans_medium"
+                                android:hint="@string/mobile_number"
+                                android:inputType="number"
+                                android:maxLength="30"
+                                android:textColor="#ff000000"
+                                android:backgroundTint="@color/white_color"
+                                android:textSize="15.0sp"
+                                android:drawableTint="@color/colorPrimary"
+                                android:layout_weight="1.5" />
+
+
+                            <Button
+                                android:id="@+id/bill"
+                                android:layout_width="29dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="0.5"
+                                android:background="@drawable/button_style_new"
+                                android:fontFamily="@font/worksans_medium"
+                                android:gravity="center"
+                                android:src="@drawable/ic_phonebook"
+                                android:text="Get"
+                                android:textColor="#fff"
+                                android:textSize="15dp"
+                                android:textStyle="bold"
+                                android:visibility="visible"
+                                android:layout_marginRight="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bill_layout"
+                        android:background="#FFFFFF"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardCornerRadius="15dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:text="Bill Details"
+                                    android:gravity="center"
+                                    android:textColor="#fff"
+                                    android:fontFamily="@font/worksans_medium"
+                                    android:background="@color/colorPrimary" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:orientation="vertical"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:layout_width="0.5dp"
+                                        android:background="#979797"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        android:layout_width="0.5dp"
+                                        android:layout_alignParentRight="true"
+                                        android:background="#979797"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        android:layout_width="0.5dp"
+                                        android:layout_marginTop="30dp"
+                                        android:layout_marginLeft="140dp"
+                                        android:background="#979797"
+                                        android:layout_height="match_parent" />
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_alignParentBottom="true"
+                                        android:background="#979797"
+                                        android:layout_height="0.5dp" />
+
+                                    <LinearLayout
+
+                                        android:layout_width="match_parent"
+                                        android:orientation="vertical"
+                                        android:layout_height="wrap_content">
+
+
+                                        <RelativeLayout
+                                            android:layout_marginTop="40dp"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Date"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/worksans_medium" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:orientation="horizontal"
+                                                android:layout_height="wrap_content">
+
+                                                <TextView
+                                                    android:id="@+id/t1"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:fontFamily="@font/worksans_medium" />
+
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="#979797"
+                                            android:layout_height="0.5dp" />
+
+                                        <RelativeLayout
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Customer Name"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/worksans_medium" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:orientation="horizontal"
+                                                android:layout_height="wrap_content">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+
+                                                    android:id="@+id/t2"
+                                                    android:fontFamily="@font/worksans_medium" />
+
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="#979797"
+                                            android:layout_height="0.5dp" />
+
+                                        <RelativeLayout
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentTop="true"
+                                                android:layout_marginTop="0dp"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/worksans_medium"
+                                                android:text="Due Amount" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:orientation="horizontal"
+                                                android:layout_height="wrap_content">
+
+                                                <ImageView
+                                                    android:layout_width="20dp"
+                                                    android:src="@drawable/rs"
+                                                    android:layout_height="20dp" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/t3"
+                                                    android:fontFamily="@font/worksans_medium" />
+
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="#979797"
+                                            android:layout_height="0.5dp" />
+
+                                        <RelativeLayout
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Due Date"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/worksans_medium" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:orientation="horizontal"
+                                                android:layout_height="wrap_content">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/t4"
+                                                    android:fontFamily="@font/worksans_medium" />
+
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:layout_marginTop="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_alignParentRight="true"
+                                            android:background="#979797"
+                                            android:layout_height="0.5dp" />
+
+                                        <RelativeLayout
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginHorizontal="10dp"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:text="Reference Id"
+                                                android:textColor="#000"
+                                                android:fontFamily="@font/worksans_medium" />
+
+                                            <LinearLayout
+                                                android:layout_width="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:orientation="horizontal"
+                                                android:layout_height="wrap_content">
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/t5"
+                                                    android:fontFamily="@font/worksans_medium" />
+
+                                            </LinearLayout>
+
+
+                                        </RelativeLayout>
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                    </RelativeLayout>
+
+
+                    <EditText
+                        android:id="@id/edtAmount"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:drawableLeft="@drawable/rs"
+                        android:drawablePadding="10.0dip"
+                        android:hint="@string/amount"
+                        android:inputType="number"
+                        android:fontFamily="@font/worksans_medium"
+                        android:textColor="#ff000000"
+                        android:textSize="15.0sp"
+                        android:background="@drawable/background_shadow"
+                        android:drawableTint="@color/colorPrimary" />
+
+
+                    <Button
+                        android:id="@id/btnRecharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="39dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginRight="5.0dip"
+                        android:layout_toLeftOf="@id/btn_back"
+                        android:background="@drawable/background_shadow"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:drawableRight="@drawable/ic_baseline_arrow_forward_24"
+                        android:drawableTint="@color/white_color"
+                        android:foregroundGravity="center"
+                        android:gravity="left|center"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="25dp"
+                        android:text="Recharge"
+                        android:textColor="@color/white_color"
+                        android:fontFamily="@font/worksans_medium" />
+                    `
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <FrameLayout
+                android:layout_marginBottom="20dp"
+                android:id="@+id/f1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="9dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                android:layout_below="@id/cardView2"
+                app:layout_constraintVertical_bias="1.0"
+                android:layout_marginRight="4dp"
+                android:layout_marginLeft="4dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
